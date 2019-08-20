@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.src.js"></script>
+    <![endif]-->
+    <style>
+        body
+        {
+            background-image:url("images/10.jpg");
+            background-size: 1070px;
+            font-family: 'gotham-rounded-book','Varela Round', sans-serif;
+        }
+        #loginform
+        {
+            width:400px;
+            height:400px;
+            border:4px dashed #DCEDC2;
+            background-color:white;
+            margin:130px auto;
+            text-align:center;
+            transform: rotate(6deg);
+        }
+        #logintitle
+        {
+            text-align:center;
+            font-weight:bold;
+            color:#FFAAA6;
+            transform: rotate(-4deg);
+            -webkit-transition:all 1s ease-in-out;
+        }
+        #logintitle:hover
+        {
+            -webkit-transform:skew(20deg) scale(1.1);
+        }
+        .inputcontrol
+        {
+            width:70%;
+            height:40px;
+            margin:15px auto;
+            font-size:16px;
+            color:#FF8C94;
+            border:3px dotted #DCEDC2;
+            transform: rotate(-4deg);
+        }
+        .checkinput
+        {
+            width:70%;
+            height:40px;
+            margin:15px auto;
+            font-size:16px;
+            color:#FF8C94;
+            transform: rotate(-4deg);
+        }
+        .buttoncontrol
+        {
+            width:60%;
+            height:40px;
+            margin:15px auto;
+            font-size:16px;
+            color:#a6cf89;
+            background-color:#FFD3B5;
+            transform: rotate(-4deg);
+            margin-top:-20px;
+        }
+        #signuplink
+        {
+            color:#FF8C94;
+        }
+        #signup
+        {
+            height:30px;
+            transform: rotate(-4deg);
+        }
+        span
+        {
+            margin-top:-12px;
+            color:#FFAAA6;
+            transform: rotate(-4deg);
+        }
+        /*#formcontainer
+        {
+            width:70%;
+            height:100%;
+            border:dashed;
+            text-align:center;
+        }*/
+    </style>
+    <script>
+        
+        function checkpass(x)
+        {
+            pspan = document.getElementById('passspan');
+            if (isFinite(x.value)) {
+                pspan.className += " glyphicon glyphicon-ok ";
+            }                         
+            else                      
+            {                         
+                pspan.className += " glyphicon glyphicon-alert ";
+            }
+        }        function checkuser(y)
+        {
+            uspan = document.getElementById('userspan');
+            if (isNaN(y.value))
+            {
+                uspan.className += " glyphicon glyphicon-ok ";
+            }
+            else
+            {
+                uspan.className += " glyphicon glyphicon-alert ";
+            }
+        }
+    </script>
+</head>
+<body>
+
+
+    <div class="container">
+        <section id="loginform">
+                <h1 id="logintitle">Login</h1>
+                <form method="get" action="#">
+                    <div class="form-group">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control inputcontrol" placeholder="UserName" onblur="checkuser(this);" />
+                            <span class="form-control-feedback" id="userspan"></span>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input id="pass" type="password" class="form-control inputcontrol" placeholder="Password" onblur="checkpass(this);" />
+                            <span class="form-control-feedback" id="passspan"></span>
+                        </div>
+
+                        <div class="checkbox-inline checkinput"><input type="checkbox" class="checkbox" /><span> Remember Password</span></div>
+                        <a href="Home.html"><input type="button" class="form-control buttoncontrol" value="login"/></a>
+                        <div><h5 id="signup">If You New User?<a href="signup.html" id="signuplink">Create Acount</a></h5></div>
+                        <a href="home.html"><input type="button" class="form-control buttoncontrol" value="Or back to home" /></a>
+                    </div>
+                </form>
+        </section>
+    </div>
+
+
+
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

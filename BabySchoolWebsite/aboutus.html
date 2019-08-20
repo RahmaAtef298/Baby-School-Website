@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.src.js"></script>
+    <![endif]-->
+    <style>
+        body {
+            position: relative;
+            font-family: 'gotham-rounded-book','Varela Round', sans-serif;
+        }
+
+        #header {
+            color: #FF8C94;
+            word-spacing: 4px;
+        }
+
+        #schoolname {
+            font-size: 60px;
+        }
+
+        #schooltitle {
+            font-size: 22px;
+            color: #FFD3B5;
+            margin-left: 15px;
+        }
+
+        #loginbtn
+         {
+            width:100px;
+            height:50px;
+            margin:30px;
+            color:#FF8C94;
+            background-color:#DCEDC2;
+            font-size:23px;
+            border:3px dashed #FFAAA6;
+         }
+
+        #navigationbar {
+            background-color: #DCEDC2;
+            color: #FF8C94;
+        }
+
+        .activeicon {
+            background-color: #FFD3B5;
+        }
+
+
+
+        #visiontitle {
+            font-size: 50px;
+            text-align: center;
+            color: #FFAAA6;
+        }
+
+        #visionimg 
+        {
+            margin: 45px auto;
+            width: 50%;
+            height: 150px;
+            -webkit-transition: all 1s ease-in-out;
+        }
+
+        #visionimg:hover 
+        {
+            -webkit-transform: skew(25deg) scale(1.2);
+        }
+
+        #imagecontainer {
+            text-align: center;
+        }
+
+        #visioncontent {
+            margin: 15px auto;
+            width: 50%;
+            font-size: 20px;
+        }
+
+        #breakline {
+            width: 800px;
+            border: 3px dashed #DCEDC2;
+        }
+
+        #schoolfooter {
+            color: cornflowerblue;
+            text-align: center;
+            transform: rotate(2.5deg);
+        }
+    </style>
+    <script>
+        window.addEventListener('load', onloadinghome);
+        function onloadinghome()
+        {
+            btnlist = document.querySelectorAll('.linkslist');
+            for (var i = 0; i < btnlist.length; i++) {
+                btnlist[i].addEventListener('click', changeclass);
+            }
+        }
+        function changeclass(e)
+        {
+            selectedone = e.target;
+            oldone = document.getElementsByClassName('activeicon')[0];
+            oldone.className = "linkslist";
+            selectedone.className += " activeicon";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="header">
+            <div class="col-sm-8 col-sm-offset-1"><h1 class="text-center" id="schoolname">Baby School   <sub id="schooltitle">For a better Generation</sub></h1></div>
+            <div class="col-sm-2"><center><a class="btn" id="loginbtn" href="login.html">Login</a></center></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid" id="navigationbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li style="color:#FF8C94;"><a href="Home.html" class="linkslist activeicon">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle linkslist" data-toggle="dropdown" href="#">Our Divisions <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="KG1.html" style="color:#FF8C94;">KG1</a></li>
+                            <li><a href="KG2.html" style="color:#FF8C94;">KG2</a></li>
+                            <li><a href="babysitting.html" style="color:#FF8C94;">Babysitting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="linkslist">Contact</a></li>
+                    <li><a href="aboutus.html" class="linkslist">About Us</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" style="color:#FF8C94;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit" style="background-color:#FFD3B5;">
+                                <i class="glyphicon glyphicon-search " style="color:#FF8C94;"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="imagecontainer"><img id="visionimg" src="images/5.png" /></div>
+        <h1 id="visiontitle">About Us </h1>
+        <p id="visioncontent">
+            Our website is mainly made for helping pariants to Keep on eye on thier children continiously and for giving thier children 
+            all Benifits and comfortable and good Education to grow up with high skills and behaviors .<br />
+            Also we help teachers to get a job if it available and with more qulifications and suitable for this job 
+
+        </p>
+    </div>
+    <br />
+    <br />
+    <div class="container">
+        <footer class="row" id="schoolfooter">
+            <div class="col-sm-12">
+                <div>
+                    <img src="images/9.gif" class="img-responsive">
+                </div>
+                <div>
+                    &copy; Baby School 2017  |  All Rights Reserved | site by <a href="mailto:rahmaroma158@email.com">Rahma Atef</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
